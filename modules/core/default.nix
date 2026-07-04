@@ -56,7 +56,6 @@
 
     # Hyprland
     polkit
-    sddm
 
     waybar
     kitty
