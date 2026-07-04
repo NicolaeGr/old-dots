@@ -1,6 +1,12 @@
-{ inputs, lib, pkgs, ... }: {
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
+{
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "26.05";
 
   # Move from here
   programs.zsh.enable = true;
@@ -14,7 +20,10 @@
     useXkbConfig = true;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   services.printing.enable = true;
 
@@ -62,8 +71,7 @@
 
     (waybar.overrideAttrs (oldAttrs: {
       mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    })
-    )
+    }))
 
     # Programming
     gcc
@@ -91,5 +99,4 @@
   };
 
   services.openssh.enable = true;
-
 }

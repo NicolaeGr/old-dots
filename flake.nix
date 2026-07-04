@@ -10,33 +10,24 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+    }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        config = { allowUnfree = true; };
+        config = {
+          allowUnfree = true;
+        };
       };
     in
     {
       nixosConfigurations = {
-        # odin = nixpkgs.lib.nixosSystem {
-        #   specialArgs = {
-        #     inherit inputs system;
-        #   };
-
-        #   modules = [
-        #     home-manager.nixosModules.home-manager
-
-        #     ./modules/core
-
-        #     ./hosts/odin
-        #   ];
-
-        #   system.stateVersion = "23.11";
-        # };
-
-        zion = nixpkgs.lib.nixosSystem {
+        soul = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs system;
           };
@@ -48,10 +39,9 @@
 
             ./modules/hyprland
 
-            ./hosts/zion
+            ./hosts/soul
           ];
         };
       };
     };
 }
-

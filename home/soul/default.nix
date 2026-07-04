@@ -1,8 +1,14 @@
-{ config, pkgs, username, ... }: {
-  imports = [ ./../config/hyprland ];
+{
+  config,
+  pkgs,
+  username,
+  ...
+}:
+{
+  imports = [ ./../config ];
 
-  home.username = "pruple";
-  home.homeDirectory = "/home/pruple";
+  home.username = "soul";
+  home.homeDirectory = "/home/soul";
 
   home.packages = with pkgs; [
     firefox

@@ -1,26 +1,28 @@
-{ inputs, pkgs, system, ... }: {
+{
+  pkgs,
+  system,
+  ...
+}:
+{
 
   users.users = {
-    # root = {
-    #   isSystemUser = true;
-    #   home = "/root";
-    #   shell = pkgs.zsh;
-    # };
-
-    pruple = {
+    soul = {
       isNormalUser = true;
-      home = "/home/pruple";
+      home = "/home/soul";
       shell = pkgs.zsh;
 
-      extraGroups = [ "wheel" "networkmanager" "audio" "video" "input" "storage" "users" "power" "libvirt" "docker" ];
-    };
-
-    nicolae = {
-      isNormalUser = true;
-      home = "/home/nicolae";
-      shell = pkgs.zsh;
-
-      extraGroups = [ "wheel" "networkmanager" "audio" "video" "input" "storage" "users" "power" "libvirt" "docker" ];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+        "audio"
+        "video"
+        "input"
+        "storage"
+        "users"
+        "power"
+        "libvirt"
+        "docker"
+      ];
     };
   };
 
@@ -30,22 +32,12 @@
     };
 
     users = {
-      pruple = {
-        imports = [ 
-          ./../../home/pruple ];
-
-        home.stateVersion = "23.11";
-
-        programs.home-manager.enable = true;
-      };
-
-      nicolae = {
+      soul = {
         imports = [
-
-          ./../../home/nicolae
+          ./../../home/soul
         ];
 
-        home.stateVersion = "23.11";
+        home.stateVersion = "26.05";
 
         programs.home-manager.enable = true;
       };
