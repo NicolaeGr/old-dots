@@ -60,7 +60,7 @@
     waybar
     kitty
 
-    rofi-wayland
+    rofi
 
     dunst
     libnotify

@@ -15,7 +15,7 @@
   };
 
   hardware = {
-    opengl.enable = true;
+    graphics.enable = true;
 
     nvidia.modesetting.enable = true;
   };
@@ -26,7 +26,7 @@
     xdg-desktop-portal-hyprland
   ];
 
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.xserver.enable = true;
 
   security.polkit.enable = true;
@@ -47,5 +47,5 @@
     };
   };
 
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 }
