@@ -67,9 +67,7 @@
 
     swww
 
-    (waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    }))
+    waybar
 
     # Programming
     gcc
