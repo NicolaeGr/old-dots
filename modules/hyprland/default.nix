@@ -47,7 +47,5 @@
     };
   };
 
-  sound.enable = true;
-
   services.xserver.libinput.enable = true;
 }
