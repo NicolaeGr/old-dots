@@ -1,24 +1,11 @@
 {
-  config,
-  pkgs,
-  username,
+  configLib,
   ...
 }:
 {
-  imports = [ ./../config ];
+  imports = map configLib.relativeToRoot [ "home/_common" ];
 
-  home.username = "soul";
-  home.homeDirectory = "/home/soul";
-
-  home.packages = with pkgs; [
-    firefox
-  ];
-
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    NIXOS_OZONE_WL = "1";
-    WLD_NO_HARDWARE_CURSORS = "1";
-  };
+  home.stateVersion = "26.05";
 
   home.file = { };
 }
