@@ -48,9 +48,6 @@
   };
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
-
-  programs.light.enable = true;
 
   services.xserver.libinput.enable = true;
 }

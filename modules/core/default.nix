@@ -31,7 +31,6 @@
 
   environment.systemPackages = with pkgs; [
     nixpkgs-fmt
-    xorg.xbacklight
     auto-cpufreq
 
     # Editors
