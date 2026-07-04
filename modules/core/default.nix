@@ -83,7 +83,6 @@
 
     # Work
     obsidian
-    onlyoffice-bin
 
     nvtop-amd
   ];
