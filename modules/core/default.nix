@@ -38,7 +38,7 @@
     neovim
 
     # Utils
-    neofetch
+    fastfetch
     wget
     curl
     git
