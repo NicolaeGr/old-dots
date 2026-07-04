@@ -83,8 +83,6 @@
 
     # Work
     obsidian
-
-    nvtop-amd
   ];
 
   services.auto-cpufreq.enable = true;
